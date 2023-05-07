@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href={{url_for('static' , filename='css/normalize.css' )}}>
+    <link rel="stylesheet" href={{url_for('static' , filename='css/grid.css' )}}>
+    <link rel='stylesheet' href={{url_for('static' , filename='css/style.css' )}}>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap"
+        rel="stylesheet" type='text/css'>
+    <title>Image Classification WebApp</title>
+    <meta name="keywords" content="cutom file input, styling, label, cross-browser, accessible, input type file" />
+
+    <style>
+        .content {
+            max-width: 500px;
+            margin: auto;
+        }
+
+        .bg-img {
+            width: 100%;
+            height: 100vh;
+            background-image: linear-gradient(rgba(255, 255, 255, 0rgba(255, 255, 255, 0.7), 0.7));
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="bg-img">
+        <div class="content">
+            <div class="index-main">
+
+                <div style="width : 100%; padding-top : 5%;">
+                    <div class="header-content">
+                        <h1 style="text-align: center;color: rgb(0, 0, 0);font-weight: bold;"><span
+                                class="header-content-text">Image Classification Model</span></h1>
+                    </div>
+                </div>
+
+                <div class="upload-section">
+
+                    <div class="upload-file">
+                        <form class="file-form" action="/success" method="POST" enctype="multipart/form-data">
+                            <label for="image">Upload an Image:</label>
+                            <input type="file" name="file" id="image" />
+                            <button type="submit" style="max-width: 200px; max-height: 150px;"
+                                class="btn">Upload</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
